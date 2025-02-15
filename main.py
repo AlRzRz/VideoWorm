@@ -1,5 +1,8 @@
 from youtube_transcript_api import YouTubeTranscriptApi as yta
 import re
+import ai
+
+
 
 def parseUserInput(requestedVideo: str) -> str:
   """
@@ -62,8 +65,8 @@ def main():
   except:
     pass
 
-  # Query OpenAI API with transcript (queryAI())
-  # Create .env File with API keys
+  analyzed_text = ai.analyzer(transcript)
+  
 
   # Format OpenAI resp
   # Return Resp to User
