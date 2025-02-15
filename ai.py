@@ -18,11 +18,11 @@ def analyzer(transcript: str) -> str:
     ]
   )
 
-  print(completion.choices[0].message.content)
+  # print(completion.choices[0].message.content)
 
   return completion.choices[0].message.content
 
 
 # Test:
-analyzer(prompts.placeholderText)
+# analyzer(prompts.placeholderText)
   

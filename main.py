@@ -1,6 +1,7 @@
 from youtube_transcript_api import YouTubeTranscriptApi as yta
 import re
 import ai
+import display
 
 
 
@@ -41,10 +42,6 @@ def queryParseApi(link: str) -> str:
   return joined_str
   
 
-def queryAI(transcript: str) -> str:
-  pass
-
-
 def formatText(textCargo: str) -> None:
    print(textCargo.center(50, '_'), '\n')
 
@@ -55,8 +52,8 @@ def main():
   
   
   formatText('Please Input Desired Video to be Analyzed:')
-  # usrInput = input()
-  usrInput = 'https://www.youtube.com/watch?v=Q9uXOSGS8IQ'
+  usrInput = input()
+  # usrInput = 'https://www.youtube.com/watch?v=Q9uXOSGS8IQ'
   
   parsedUsrInput = parseUserInput(usrInput)
   
@@ -65,15 +62,8 @@ def main():
   except:
     pass
 
-  analyzed_text = ai.analyzer(transcript)
-  
-
-  # Format OpenAI resp
-  # Return Resp to User
-
-
-
-
+  analyzedText = ai.analyzer(transcript)
+  display.show_popup(analyzedText)
 
 
 
