@@ -25,7 +25,8 @@ def show_popup(summary_text):
 
   root.mainloop()
 
-summary = prompts.placeholderText
 
 
-show_popup(summary)
+#Tests:
+# summary = prompts.placeholderText
+# show_popup(summary)
